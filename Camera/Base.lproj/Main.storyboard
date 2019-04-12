@@ -53,13 +53,72 @@
                     <view key="view" contentMode="scaleToFill" id="aQo-t5-cnH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.83105272050000001" green="0.1781231761" blue="0.1214556918" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6j-D5-Nbx">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Cancel" id="Ztg-kH-zVU"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4ep-rg-BOC"/>
+                                    <barButtonItem title="Done" id="XQz-gi-Iyv"/>
+                                </items>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aXg-G6-OFT">
+                                <rect key="frame" x="0.0" y="88" width="375" height="609"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ZP-fT-rCo" customClass="FiltersScrollView" customModule="Camera" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="690.33333333333337" width="375" height="121.66666666666663"/>
+                                <color key="backgroundColor" red="0.83105272050000001" green="0.1781231761" blue="0.1214556918" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0ZP-fT-rCo" firstAttribute="leading" secondItem="hBR-Ri-qQt" secondAttribute="leading" id="1Dl-Cl-c12"/>
+                            <constraint firstItem="aXg-G6-OFT" firstAttribute="width" secondItem="aQo-t5-cnH" secondAttribute="width" id="1Ri-15-GLe"/>
+                            <constraint firstItem="0ZP-fT-rCo" firstAttribute="width" secondItem="aQo-t5-cnH" secondAttribute="width" id="5dI-fB-7FL"/>
+                            <constraint firstItem="K6j-D5-Nbx" firstAttribute="leading" secondItem="hBR-Ri-qQt" secondAttribute="leading" id="C9v-sh-4fx"/>
+                            <constraint firstItem="K6j-D5-Nbx" firstAttribute="trailing" secondItem="hBR-Ri-qQt" secondAttribute="trailing" id="Cq2-gc-yLE"/>
+                            <constraint firstItem="0ZP-fT-rCo" firstAttribute="height" secondItem="aXg-G6-OFT" secondAttribute="height" multiplier="0.2" id="GZe-mf-cH9"/>
+                            <constraint firstItem="aXg-G6-OFT" firstAttribute="height" secondItem="aQo-t5-cnH" secondAttribute="height" multiplier="0.75" id="Gd6-gF-ke1"/>
+                            <constraint firstItem="aXg-G6-OFT" firstAttribute="top" secondItem="K6j-D5-Nbx" secondAttribute="bottom" id="Nwu-8P-iKg"/>
+                            <constraint firstItem="K6j-D5-Nbx" firstAttribute="top" secondItem="hBR-Ri-qQt" secondAttribute="top" id="R8r-OK-JlW"/>
+                            <constraint firstItem="aXg-G6-OFT" firstAttribute="leading" secondItem="hBR-Ri-qQt" secondAttribute="leading" id="d8N-ns-sIN"/>
+                            <constraint firstAttribute="bottom" secondItem="0ZP-fT-rCo" secondAttribute="bottom" id="w7O-fy-pWf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hBR-Ri-qQt"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lc-OK-ut0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="-561"/>
+            <point key="canvasLocation" x="1594" y="-594"/>
+        </scene>
+        <!--Photo PreviewVC-->
+        <scene sceneID="85r-Ku-8x3">
+            <objects>
+                <viewController storyboardIdentifier="PhotoPreviewVC" id="FcR-Gg-0EM" customClass="PhotoPreviewVC" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="unn-A2-4oo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XSQ-Ii-ENN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XSQ-Ii-ENN" firstAttribute="leading" secondItem="mnN-D9-hO6" secondAttribute="leading" id="OgH-J5-wjp"/>
+                            <constraint firstAttribute="bottom" secondItem="XSQ-Ii-ENN" secondAttribute="bottom" id="PQe-yh-SN8"/>
+                            <constraint firstItem="XSQ-Ii-ENN" firstAttribute="top" secondItem="unn-A2-4oo" secondAttribute="top" id="SmG-EC-LrS"/>
+                            <constraint firstItem="mnN-D9-hO6" firstAttribute="trailing" secondItem="XSQ-Ii-ENN" secondAttribute="trailing" id="YOI-7i-2Rc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mnN-D9-hO6"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="XSQ-Ii-ENN" id="ESN-lF-0wI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wds-dY-gKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800.79999999999995" y="-594.0886699507389"/>
         </scene>
         <!--Photo ListVCV-->
         <scene sceneID="ADf-vb-mhV">
@@ -73,11 +132,11 @@
                             <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="PhotoCell" id="ndj-xx-MX7" customClass="PhotoCell" customModule="Camera" customModuleProvider="target">
-                                <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                <rect key="frame" x="2" y="2" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>

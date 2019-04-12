@@ -9,5 +9,5 @@
 import UIKit
 
 class PhotoFiltersVC: UIViewController {
-    
+    var image: UIImage?
 }
